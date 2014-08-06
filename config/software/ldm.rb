@@ -33,4 +33,6 @@ build do
 
   command "make install", env: {"DESTDIR" => "/", "LDMHOME" => install_dir}
   command "sudo make root-actions"
+  command "rm #{install_dir}/runtime"
+  command "rm #{install_dir}/src"
 end
